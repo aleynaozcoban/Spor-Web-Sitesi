@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/ustmenu.css">
+	<link rel="stylesheet" type="text/css" href="css/logo.css">
+	<link rel="stylesheet" type="text/css" href="css/altmenu.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<link rel="stylesheet" type="text/css" href="css/hizmetler.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/javas.css">
+  
+	<title>DynamicYou - Egzersiz Programı</title>
+
+</head>
+<div>
+
+<div class="logo"><img src="images/logo.png"></div>
+<div class="ustmenu">
+    <div class="asdas" style="text-align: center;"><a href="#">Sağlıklı ve Fit Bir Yaşam İçin İlk Adımı Atın!</a></div>
+</div>
+<div class="altmenu">
+<div class="menu">
+	<ul>
+		<li><a href="index.html">Anasayfa</a></li>
+		<li><a href="hakkimizda.html">Hakkımızda</a></li>
+		<li><a href="beslenme.html">Beslenme Rehberi</a></li>
+		<li><a href="iletisim.html">İletişim</a></li>
+	</ul></div>
+</div>
+<div class="slider">
+</div>
+<h1>Karvonen Hesaplama Sonucu</h1>
+<div class="kapsam">
+<div id="resim"></div>
+<div id="result"></div>
+</div>
+<div class="kapsam">
+<div id="resim2"></div>
+<div id="result2"></div>
+</div>
+<div class="kapsam">
+<div id="resim3"></div>
+<div id="result3"></div>
+</div>
+<div class="kapsam">
+<div id="resim4"></div>
+<div id="result4"></div>
+</div>
+<div class="kapsam">
+<div id="resim5"></div>
+<div id="result5"></div>
+</div>
+<script>
+    // Yerel depolamadan sonucu al
+    var sonuc = localStorage.getItem("sonuc");
+
+    // Sonuca göre farklı yazı ve resim göster
+    var resultDiv = document.getElementById("result");
+    var resimDiv = document.getElementById("resim");
+    var result2Div = document.getElementById("result2");
+    var resim2Div = document.getElementById("resim2");
+    var result3Div = document.getElementById("result3");
+    var resim3Div = document.getElementById("resim3");
+    var result4Div = document.getElementById("result4");
+    var resim4Div = document.getElementById("resim4");
+    var result5Div = document.getElementById("result5");
+    var resim5Div = document.getElementById("resim5");
+    var footerDiv = document.getElementById("footer");
+  
+  
+    if (sonuc < 120) {
+        resimDiv.innerHTML += '<img src="images/koşu.jpg">';
+        resultDiv.innerHTML = `<div class ="program">
+            <ul>
+            <li><b>Koşu: 20 dakika:</b></li>
+            <ul>
+            <p>
+                20 dakikalık bir koşuda ne kadar mesafe kat etmek istediğinizi belirleyin. Bu hedef, koşu tempomuzu ve yoğunluğumuzu belirlememize yardımcı olur.<br>
+
+<b>Koşu Başlangıcı:</b> Yavaşça başlayın ve vücudunuzu ısınmaya ve ritmik bir koşu ritmi geliştirmeye izin verin. İlk birkaç dakikada vücudunuzun ısındığına ve ritminize alıştığına emin olun.<br>
+
+
+<b>Nefes Alma Tekniği:</b> Düzenli ve derin nefes alarak koşuya devam edin. Bu, vücudunuzun oksijen alımını artırır ve dayanıklılığı destekler.<br>
+
+<b>Bitiş:</b> 25 dakika dolunca, koşuyu yavaşlatın ve soğuma egzersizleri yaparak nabzınızı yavaşça normale döndürün. Esneme hareketleri yaparak kasları rahatlatın.</p>
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/bisiklet.jpg">';
+        result2Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>Bisiklet: 20 dakika:</b></li>
+            <ul>
+            <p>
+                <b>Isınma (5 dakika):</b> Bisiklet sürmeye başlamadan önce, vücudu hazırlamak için hafif bir ısınma yapın. Düşük hızda ve düşük dirençte pedalları çevirerek kalp atış hızınızı artırın ve kaslarınızı çalıştırın.<br>
+
+<b>Orta Yoğunlukta Pedal Çevirme (10 dakika):</b> Orta dirençte ve hızda bisiklet sürmeye başlayın. Bu bölümde, kalbinizi ve kaslarınızı çalıştıracak bir tempoda pedal çevirin.<br>
+
+<b>Yüksek Yoğunlukta Interval Antrenmanı (5 dakika):</b> Bu bölümde, pedalları yüksek dirençte ve hızda çevirerek 1 dakika boyunca maksimum çaba sarf edin, ardından 1 dakika boyunca düşük dirençte ve hızda dinlenin.<br>
+
+<b>Soğuma ve Esneme (5 dakika):</b> Antrenmanı tamamladıktan sonra, vücudu yavaşça soğutmak ve kasların esnemesini sağlamak için son 5 dakikayı hafif tempoda pedal çevirerek ve gevşeme egzersizleri yaparak geçirin.<br>
+</p>
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/ip.jpg">';
+            result3Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>İp Atlama: 15 dakika</b></li>
+            <ul>
+            <p>
+               <b>Isınma:</b> Egzersize başlamadan önce vücudunuzu hazırlamak için hafif bir ısınma yapın. Yaklaşık 5-10 dakika boyunca hafif tempoda koşu yapabilir, vücut esneme hareketleri yapabilir veya yerinde zıplamalar yapabilirsiniz.<br>
+
+<b>Doğru Duruş ve Teknik:</b>Dik bir duruşla ayaklarınızı omuz genişliği kadar açın.
+Kollarınızı vücudunuzla paralel olarak yana doğru açın, dirseklerinizi hafifçe bükün.
+Ellerinizi göğsünüzün önünde, kalçalarınızın hemen üstünde tutun.
+Atlarken dirseklerinizi ve bileklerinizi kullanarak kollarınızı döndürün ve ipi yukarı doğru çevirin.
+Ayak parmaklarınız üzerine hafifçe kalkarak, hafif bir zıplama ile ipi alttan üstten geçirin.<br>
+<b>Ritmik Solunum:</b> Atlama sırasında düzenli ve ritmik bir şekilde nefes alıp verin. Her atlama sırasında nefes alıp, bir sonraki atlama sırasında nefes vermek, ritmi korumanıza yardımcı olabilir.<br>
+
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/yuzme.png">';
+            result4Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>Yüzme: 20 dakika</b></li>
+            <ul>
+            <p>
+               <b>Isınma:</b> Egzersize başlamadan önce vücudunuzu hazırlamak için hafif bir ısınma yapın. Yaklaşık 5-10 dakika boyunca hafif tempoda koşu yapabilir, vücut esneme hareketleri yapabilir veya yerinde zıplamalar yapabilirsiniz.<br>
+
+<b>Doğru Duruş ve Teknik:</b>Dik bir duruşla ayaklarınızı omuz genişliği kadar açın.
+Kollarınızı vücudunuzla paralel olarak yana doğru açın, dirseklerinizi hafifçe bükün.
+Ellerinizi göğsünüzün önünde, kalçalarınızın hemen üstünde tutun.
+Atlarken dirseklerinizi ve bileklerinizi kullanarak kollarınızı döndürün ve ipi yukarı doğru çevirin.
+Ayak parmaklarınız üzerine hafifçe kalkarak, hafif bir zıplama ile ipi alttan üstten geçirin.<br>
+<b>Ritmik Solunum:</b> Atlama sırasında düzenli ve ritmik bir şekilde nefes alıp verin. Her atlama sırasında nefes alıp, bir sonraki atlama sırasında nefes vermek, ritmi korumanıza yardımcı olabilir.<br>
+
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/koşu.jpg">';
+            result5Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>Hızlı Tempolu Yürüyüş: 25 dakika</b></li>
+            <ul>
+            <p>
+               <b>Isınma:</b> Egzersize başlamadan önce vücudunuzu hazırlamak için hafif bir ısınma yapın. Yaklaşık 5-10 dakika boyunca hafif tempoda koşu yapabilir, vücut esneme hareketleri yapabilir veya yerinde zıplamalar yapabilirsiniz.<br>
+
+<b>Doğru Duruş ve Teknik:</b>Dik bir duruşla ayaklarınızı omuz genişliği kadar açın.
+Kollarınızı vücudunuzla paralel olarak yana doğru açın, dirseklerinizi hafifçe bükün.
+Ellerinizi göğsünüzün önünde, kalçalarınızın hemen üstünde tutun.
+Atlarken dirseklerinizi ve bileklerinizi kullanarak kollarınızı döndürün ve ipi yukarı doğru çevirin.
+Ayak parmaklarınız üzerine hafifçe kalkarak, hafif bir zıplama ile ipi alttan üstten geçirin.<br>
+<b>Ritmik Solunum:</b> Atlama sırasında düzenli ve ritmik bir şekilde nefes alıp verin. Her atlama sırasında nefes alıp, bir sonraki atlama sırasında nefes vermek, ritmi korumanıza yardımcı olabilir.<br>
+
+
+            </div>`;
+
+      
+
+
+       
+    } else if (sonuc >= 120 && sonuc < 140) {
+        resimDiv.innerHTML += '<img src="images/koşu.jpg">';
+        resultDiv.innerHTML = `<div class ="program">
+            <ul>
+            <li><b>Koşu: 25 dakika:</b></li>
+            <ul>
+            <p>
+                25 dakikalık bir koşuda ne kadar mesafe kat etmek istediğinizi belirleyin. Bu hedef, koşu tempomuzu ve yoğunluğumuzu belirlememize yardımcı olur.<br>
+
+<b>Koşu Başlangıcı:</b> Yavaşça başlayın ve vücudunuzu ısınmaya ve ritmik bir koşu ritmi geliştirmeye izin verin. İlk birkaç dakikada vücudunuzun ısındığına ve ritminize alıştığına emin olun.<br>
+
+<b>Nefes Alma Tekniği:</b> Düzenli ve derin nefes alarak koşuya devam edin. Bu, vücudunuzun oksijen alımını artırır ve dayanıklılığı destekler.<br>
+
+<b>Bitiş:</b> 25 dakika dolunca, koşuyu yavaşlatın ve soğuma egzersizleri yaparak nabzınızı yavaşça normale döndürün. Esneme hareketleri yaparak kasları rahatlatın.</p>
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/bisiklet.jpg">';
+        result2Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>Bisiklet: 25 dakika:</b></li>
+            <ul>
+            <p>
+                <b>Isınma (5 dakika):</b> Bisiklet sürmeye başlamadan önce, vücudu hazırlamak için hafif bir ısınma yapın. Düşük hızda ve düşük dirençte pedalları çevirerek kalp atış hızınızı artırın ve kaslarınızı çalıştırın.<br>
+
+<b>Orta Yoğunlukta Pedal Çevirme (10 dakika):</b> Orta dirençte ve hızda bisiklet sürmeye başlayın.<br>
+<b>Yüksek Yoğunlukta Interval Antrenmanı (5 dakika):</b>Bu bölümde, pedalları yüksek dirençte ve hızda çevirerek 1 dakika boyunca maksimum çaba sarf edin, ardından 1 dakika boyunca düşük dirençte ve hızda dinlenin. val tearını 5 dakika boyunca sürdürün.<br>
+
+<b>Soğuma ve Esneme (5 dakika):</b> Antrenmanı tamamladıktan sonra, vücudu yavaşça soğutmak ve kasların esnemesini sağlamak için son 5 dakikayı hafif tempoda pedal çevirerek ve gevşeme egzersizleri yaparak geçirin.<br>
+</p>
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/ip.jpg">';
+            result3Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>İp Atlama: 20 dakika</b></li>
+            <ul>
+            <p>
+               <b>Isınma:</b> Egzersize başlamadan önce vücudunuzu hazırlamak için hafif bir ısınma yapın. Yaklaşık 5-10 dakika boyunca hafif tempoda koşu yapabilir, vücut esneme hareketleri yapabilir veya yerinde zıplamalar yapabilirsiniz.<br>
+
+<b>Doğru Duruş ve Teknik:</b>Dik bir duruşla ayaklarınızı omuz genişliği kadar açın.
+Kollarınızı vücudunuzla paralel olarak yana doğru açın, dirseklerinizi hafifçe bükün.
+Ellerinizi göğsünüzün önünde, kalçalarınızın hemen üstünde tutun.
+Atlarken dirseklerinizi ve bileklerinizi kullanarak kollarınızı döndürün ve ipi yukarı doğru çevirin.
+Ayak parmaklarınız üzerine hafifçe kalkarak, hafif bir zıplama ile ipi alttan üstten geçirin.<br>
+<b>Ritmik Solunum:</b> Atlama sırasında düzenli ve ritmik bir şekilde nefes alıp verin. Her atlama sırasında nefes alıp, bir sonraki atlama sırasında nefes vermek, ritmi korumanıza yardımcı olabilir.<br>
+
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/yuzme.png">';
+            result4Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>Yüzme: 25 dakika</b></li>
+            <ul>
+            <p>
+               <b>Isınma:</b> Egzersize başlamadan önce vücudunuzu hazırlamak için hafif bir ısınma yapın. Yaklaşık 5-10 dakika boyunca hafif tempoda koşu yapabilir, vücut esneme hareketleri yapabilir veya yerinde zıplamalar yapabilirsiniz.<br>
+
+<b>Doğru Duruş ve Teknik:</b>Dik bir duruşla ayaklarınızı omuz genişliği kadar açın.
+Kollarınızı vücudunuzla paralel olarak yana doğru açın, dirseklerinizi hafifçe bükün.
+Ellerinizi göğsünüzün önünde, kalçalarınızın hemen üstünde tutun.
+Atlarken dirseklerinizi ve bileklerinizi kullanarak kollarınızı döndürün ve ipi yukarı doğru çevirin.
+Ayak parmaklarınız üzerine hafifçe kalkarak, hafif bir zıplama ile ipi alttan üstten geçirin.<br>
+<b>Ritmik Solunum:</b> Atlama sırasında düzenli ve ritmik bir şekilde nefes alıp verin. Her atlama sırasında nefes alıp, bir sonraki atlama sırasında nefes vermek, ritmi korumanıza yardımcı olabilir.<br>
+
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/koşu.jpg">';
+            result5Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>Hızlı Tempolu Yürüyüş: 30 dakika</b></li>
+            <ul>
+            <p>
+               <b>Isınma:</b> Egzersize başlamadan önce vücudunuzu hazırlamak için hafif bir ısınma yapın. Yaklaşık 5-10 dakika boyunca hafif tempoda koşu yapabilir, vücut esneme hareketleri yapabilir veya yerinde zıplamalar yapabilirsiniz.<br>
+
+<b>Doğru Duruş ve Teknik:</b>Dik bir duruşla ayaklarınızı omuz genişliği kadar açın.
+Kollarınızı vücudunuzla paralel olarak yana doğru açın, dirseklerinizi hafifçe bükün.
+Ellerinizi göğsünüzün önünde, kalçalarınızın hemen üstünde tutun.
+Atlarken dirseklerinizi ve bileklerinizi kullanarak kollarınızı döndürün ve ipi yukarı doğru çevirin.
+Ayak parmaklarınız üzerine hafifçe kalkarak, hafif bir zıplama ile ipi alttan üstten geçirin.<br>
+<b>Ritmik Solunum:</b> Atlama sırasında düzenli ve ritmik bir şekilde nefes alıp verin. Her atlama sırasında nefes alıp, bir sonraki atlama sırasında nefes vermek, ritmi korumanıza yardımcı olabilir.<br>
+
+            </div>`;
+
+
+
+    } else if (sonuc >= 140 && sonuc <160){
+        resimDiv.innerHTML += '<img src="images/koşu.jpg">';
+        resultDiv.innerHTML = `<div class ="program">
+            <ul>
+            <li><b>Koşu: 30 dakika:</b></li>
+            <ul>
+            <p>
+                30 dakikalık bir koşuda ne kadar mesafe kat etmek istediğinizi belirleyin. Bu hedef, koşu tempomuzu ve yoğunluğumuzu belirlememize yardımcı olur.<br>
+
+<b>Koşu Başlangıcı:</b> Yavaşça başlayın ve vücudunuzu ısınmaya ve ritmik bir koşu ritmi geliştirmeye izin verin. İlk birkaç dakikada vücudunuzun ısındığına ve ritminize alıştığına emin olun.<br>
+
+
+<b>Nefes Alma Tekniği:</b> Düzenli ve derin nefes alarak koşuya devam edin. Bu, vücudunuzun oksijen alımını artırır ve dayanıklılığı destekler.<br>
+
+<b>Bitiş:</b> 25 dakika dolunca, koşuyu yavaşlatın ve soğuma egzersizleri yaparak nabzınızı yavaşça normale döndürün. Esneme hareketleri yaparak kasları rahatlatın.</p>
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/bisiklet.jpg">';
+        result2Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>Bisiklet: 30 dakika:</b></li>
+            <ul>
+            <p>
+                <b>Isınma (5 dakika):</b> Bisiklet sürmeye başlamadan önce, vücudu hazırlamak için hafif bir ısınma yapın. Düşük hızda ve düşük dirençte pedalları çevirerek kalp atış hızınızı artırın ve kaslarınızı çalıştırın.<br>
+
+<b>Orta Yoğunlukta Pedal Çevirme (10 dakika):</b> Orta dirençte ve hızda bisiklet sürmeye başlayın. Bu bölümde, kalbinizi ve kaslarınızı çalıştıracak bir tempoda pedal çevirin.<br>
+
+<b>Yüksek Yoğunlukta Interval Antrenmanı (10 dakika):</b> Bu bölümde, pedalları yüksek dirençte ve hızda çevirerek 1 dakika boyunca maksimum çaba sarf edin, ardından 1 dakika boyunca düşük dirençte ve hızda dinlenin.<br>
+
+<b>Soğuma ve Esneme (5 dakika):</b> Antrenmanı tamamladıktan sonra, vücudu yavaşça soğutmak ve kasların esnemesini sağlamak için son 5 dakikayı hafif tempoda pedal çevirerek ve gevşeme egzersizleri yaparak geçirin.<br>
+</p>
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/ip.jpg">';
+            result3Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>İp Atlama: 25 dakika</b></li>
+            <ul>
+            <p>
+               <b>Isınma:</b> Egzersize başlamadan önce vücudunuzu hazırlamak için hafif bir ısınma yapın. Yaklaşık 5-10 dakika boyunca hafif tempoda koşu yapabilir, vücut esneme hareketleri yapabilir veya yerinde zıplamalar yapabilirsiniz.<br>
+
+<b>Doğru Duruş ve Teknik:</b>Dik bir duruşla ayaklarınızı omuz genişliği kadar açın.
+Kollarınızı vücudunuzla paralel olarak yana doğru açın, dirseklerinizi hafifçe bükün.
+Ellerinizi göğsünüzün önünde, kalçalarınızın hemen üstünde tutun.
+Atlarken dirseklerinizi ve bileklerinizi kullanarak kollarınızı döndürün ve ipi yukarı doğru çevirin.
+Ayak parmaklarınız üzerine hafifçe kalkarak, hafif bir zıplama ile ipi alttan üstten geçirin.<br>
+<b>Ritmik Solunum:</b> Atlama sırasında düzenli ve ritmik bir şekilde nefes alıp verin. Her atlama sırasında nefes alıp, bir sonraki atlama sırasında nefes vermek, ritmi korumanıza yardımcı olabilir.<br>
+
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/yuzme.png">';
+            result4Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>Yüzme: 30 dakika</b></li>
+            <ul>
+            <p>
+               <b>Isınma:</b> Egzersize başlamadan önce vücudunuzu hazırlamak için hafif bir ısınma yapın. Yaklaşık 5-10 dakika boyunca hafif tempoda koşu yapabilir, vücut esneme hareketleri yapabilir veya yerinde zıplamalar yapabilirsiniz.<br>
+
+<b>Doğru Duruş ve Teknik:</b>Dik bir duruşla ayaklarınızı omuz genişliği kadar açın.
+Kollarınızı vücudunuzla paralel olarak yana doğru açın, dirseklerinizi hafifçe bükün.
+Ellerinizi göğsünüzün önünde, kalçalarınızın hemen üstünde tutun.
+Atlarken dirseklerinizi ve bileklerinizi kullanarak kollarınızı döndürün ve ipi yukarı doğru çevirin.
+Ayak parmaklarınız üzerine hafifçe kalkarak, hafif bir zıplama ile ipi alttan üstten geçirin.<br>
+<b>Ritmik Solunum:</b> Atlama sırasında düzenli ve ritmik bir şekilde nefes alıp verin. Her atlama sırasında nefes alıp, bir sonraki atlama sırasında nefes vermek, ritmi korumanıza yardımcı olabilir.<br>
+
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/koşu.jpg">';
+            result5Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>Hızlı Tempolu Yürüyüş: 35 dakika</b></li>
+            <ul>
+            <p>
+               <b>Isınma:</b> Egzersize başlamadan önce vücudunuzu hazırlamak için hafif bir ısınma yapın. Yaklaşık 5-10 dakika boyunca hafif tempoda koşu yapabilir, vücut esneme hareketleri yapabilir veya yerinde zıplamalar yapabilirsiniz.<br>
+
+<b>Doğru Duruş ve Teknik:</b>Dik bir duruşla ayaklarınızı omuz genişliği kadar açın.
+Kollarınızı vücudunuzla paralel olarak yana doğru açın, dirseklerinizi hafifçe bükün.
+Ellerinizi göğsünüzün önünde, kalçalarınızın hemen üstünde tutun.
+Atlarken dirseklerinizi ve bileklerinizi kullanarak kollarınızı döndürün ve ipi yukarı doğru çevirin.
+Ayak parmaklarınız üzerine hafifçe kalkarak, hafif bir zıplama ile ipi alttan üstten geçirin.<br>
+<b>Ritmik Solunum:</b> Atlama sırasında düzenli ve ritmik bir şekilde nefes alıp verin. Her atlama sırasında nefes alıp, bir sonraki atlama sırasında nefes vermek, ritmi korumanıza yardımcı olabilir.<br>
+
+            </div>`;
+    
+ } else {
+    resimDiv.innerHTML += '<img src="images/koşu.jpg">';
+        resultDiv.innerHTML = `<div class ="program">
+            <ul>
+            <li><b>Koşu: 35 dakika:</b></li>
+            <ul>
+            <p>
+                25 dakikalık bir koşuda ne kadar mesafe kat etmek istediğinizi belirleyin. Bu hedef, koşu tempomuzu ve yoğunluğumuzu belirlememize yardımcı olur.<br>
+
+<b>Koşu Başlangıcı:</b> Yavaşça başlayın ve vücudunuzu ısınmaya ve ritmik bir koşu ritmi geliştirmeye izin verin. İlk birkaç dakikada vücudunuzun ısındığına ve ritminize alıştığına emin olun.<br>
+
+
+
+<b>Nefes Alma Tekniği:</b> Düzenli ve derin nefes alarak koşuya devam edin. Bu, vücudunuzun oksijen alımını artırır ve dayanıklılığı destekler.<br>
+
+<b>Bitiş:</b> 25 dakika dolunca, koşuyu yavaşlatın ve soğuma egzersizleri yaparak nabzınızı yavaşça normale döndürün. Esneme hareketleri yaparak kasları rahatlatın.</p>
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/bisiklet.jpg">';
+        result2Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>Bisiklet: 35 dakika:</b></li>
+            <ul>
+            <p>
+                <b>Isınma (5 dakika):</b> Bisiklet sürmeye başlamadan önce, vücudu hazırlamak için hafif bir ısınma yapın. Düşük hızda ve düşük dirençte pedalları çevirerek kalp atış hızınızı artırın ve kaslarınızı çalıştırın.<br>
+
+<b>Orta Yoğunlukta Pedal Çevirme (15 dakika):</b> Orta dirençte ve hızda bisiklet sürmeye başlayın. Bu bölümde, kalbinizi ve kaslarınızı çalıştıracak bir tempoda pedal çevirin.<br>
+
+<b>Yüksek Yoğunlukta Interval Antrenmanı (10 dakika):</b> Bu bölümde, pedalları yüksek dirençte ve hızda çevirerek 1 dakika boyunca maksimum çaba sarf edin, ardından 1 dakika boyunca düşük dirençte ve hızda dinlenin.<br>
+
+<b>Soğuma ve Esneme (5 dakika):</b> Antrenmanı tamamladıktan sonra, vücudu yavaşça soğutmak ve kasların esnemesini sağlamak için son 5 dakikayı hafif tempoda pedal çevirerek ve gevşeme egzersizleri yaparak geçirin.<br>
+</p>
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/ip.jpg">';
+            result3Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>İp Atlama: 30 dakika</b></li>
+            <ul>
+            <p>
+               <b>Isınma:</b> Egzersize başlamadan önce vücudunuzu hazırlamak için hafif bir ısınma yapın. Yaklaşık 5-10 dakika boyunca hafif tempoda koşu yapabilir, vücut esneme hareketleri yapabilir veya yerinde zıplamalar yapabilirsiniz.<br>
+
+<b>Doğru Duruş ve Teknik:</b>Dik bir duruşla ayaklarınızı omuz genişliği kadar açın.
+Kollarınızı vücudunuzla paralel olarak yana doğru açın, dirseklerinizi hafifçe bükün.
+Ellerinizi göğsünüzün önünde, kalçalarınızın hemen üstünde tutun.
+Atlarken dirseklerinizi ve bileklerinizi kullanarak kollarınızı döndürün ve ipi yukarı doğru çevirin.
+Ayak parmaklarınız üzerine hafifçe kalkarak, hafif bir zıplama ile ipi alttan üstten geçirin.<br>
+<b>Ritmik Solunum:</b> Atlama sırasında düzenli ve ritmik bir şekilde nefes alıp verin. Her atlama sırasında nefes alıp, bir sonraki atlama sırasında nefes vermek, ritmi korumanıza yardımcı olabilir.<br>
+
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/yuzme.png">';
+            result4Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>Yüzme: 35 dakika</b></li>
+            <ul>
+            <p>
+               <b>Isınma:</b> Egzersize başlamadan önce vücudunuzu hazırlamak için hafif bir ısınma yapın. Yaklaşık 5-10 dakika boyunca hafif tempoda koşu yapabilir, vücut esneme hareketleri yapabilir veya yerinde zıplamalar yapabilirsiniz.<br>
+
+<b>Doğru Duruş ve Teknik:</b>Dik bir duruşla ayaklarınızı omuz genişliği kadar açın.
+Kollarınızı vücudunuzla paralel olarak yana doğru açın, dirseklerinizi hafifçe bükün.
+Ellerinizi göğsünüzün önünde, kalçalarınızın hemen üstünde tutun.
+Atlarken dirseklerinizi ve bileklerinizi kullanarak kollarınızı döndürün ve ipi yukarı doğru çevirin.
+Ayak parmaklarınız üzerine hafifçe kalkarak, hafif bir zıplama ile ipi alttan üstten geçirin.<br>
+<b>Ritmik Solunum:</b> Atlama sırasında düzenli ve ritmik bir şekilde nefes alıp verin. Her atlama sırasında nefes alıp, bir sonraki atlama sırasında nefes vermek, ritmi korumanıza yardımcı olabilir.<br>
+
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/koşu.jpg">';
+            result5Div.innerHTML =  `<div class ="program">
+            <ul>
+            <li><b>Hızlı Tempolu Yürüyüş: 40 dakika</b></li>
+            <ul>
+            <p>
+               <b>Isınma:</b> Egzersize başlamadan önce vücudunuzu hazırlamak için hafif bir ısınma yapın. Yaklaşık 5-10 dakika boyunca hafif tempoda koşu yapabilir, vücut esneme hareketleri yapabilir veya yerinde zıplamalar yapabilirsiniz.<br>
+
+<b>Doğru Duruş ve Teknik:</b>Dik bir duruşla ayaklarınızı omuz genişliği kadar açın.
+Kollarınızı vücudunuzla paralel olarak yana doğru açın, dirseklerinizi hafifçe bükün.
+Ellerinizi göğsünüzün önünde, kalçalarınızın hemen üstünde tutun.
+Atlarken dirseklerinizi ve bileklerinizi kullanarak kollarınızı döndürün ve ipi yukarı doğru çevirin.
+Ayak parmaklarınız üzerine hafifçe kalkarak, hafif bir zıplama ile ipi alttan üstten geçirin.<br>
+<b>Ritmik Solunum:</b> Atlama sırasında düzenli ve ritmik bir şekilde nefes alıp verin. Her atlama sırasında nefes alıp, bir sonraki atlama sırasında nefes vermek, ritmi korumanıza yardımcı olabilir.<br>
+
+            </div>`;
+    }
+
+</script>
+
+
+</body>
+</html>

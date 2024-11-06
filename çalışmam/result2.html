@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/ustmenu.css">
+	<link rel="stylesheet" type="text/css" href="css/logo.css">
+	<link rel="stylesheet" type="text/css" href="css/altmenu.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<link rel="stylesheet" type="text/css" href="css/hizmetler.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/javas.css">
+  
+	<title>DynamicYou - Egzersiz Programı</title>
+
+</head>
+<div>
+
+<div class="logo"><img src="images/logo.png"></div>
+<div class="ustmenu">
+ <div class="asdas" style="text-align: center;"><a href="#">Sağlıklı ve Fit Bir Yaşam İçin İlk Adımı Atın!</a></div>
+</div>
+<div class="altmenu">
+<div class="menu">
+	<ul>
+		<li><a href="index.html">Anasayfa</a></li>
+		<li><a href="hakkimizda.html">Hakkımızda</a></li>
+		<li><a href="beslenme.html">Beslenme Rehberi</a></li>
+		<li><a href="iletisim.html">İletişim</a></li>
+	</ul></div>
+
+</div>
+<div class="slider">
+</div>
+<h1>Karvonen Hesaplama Sonucu</h1>
+
+<div class="kapsam">
+<div id="resim"></div>
+<div id="result"></div>
+</div>
+<div class="kapsam">
+<div id="resim2"></div>
+<div id="result2"></div>
+</div>
+<div class="kapsam">
+<div id="resim3"></div>
+<div id="result3"></div>
+</div>
+<div class="kapsam">
+<div id="resim4"></div>
+<div id="result4"></div>
+</div>
+<div class="kapsam">
+<div id="resim5"></div>
+<div id="result5"></div>
+    </div>
+    
+<script>
+    // Yerel depolamadan sonucu al
+    var sonuc = localStorage.getItem("sonuc");
+
+    // Sonuca göre farklı yazı ve resim göster
+    var resultDiv = document.getElementById("result");
+    var resimDiv = document.getElementById("resim");
+    var result2Div = document.getElementById("result2");
+    var resim2Div = document.getElementById("resim2");
+    var result3Div = document.getElementById("result3");
+    var resim3Div = document.getElementById("resim3");
+    var result4Div = document.getElementById("result4");
+    var resim4Div = document.getElementById("resim4");
+    var result5Div = document.getElementById("result5");
+    var resim5Div = document.getElementById("resim5");
+  
+  
+    if (sonuc < 120) {
+        resimDiv.innerHTML += '<img src="images/yoga.png">';
+        resultDiv.innerHTML = `<div class ="program">
+           <b> Yoga:</b> 30-45 dakika
+        <li><b>Isınma (5 dakika):</b>
+            <ul>
+                <li>Güneşe Selam (Surya Namaskar) serisini 5 kez tekrarlayın.</li>
+                <li>Dinamik nefes egzersizleri yapın.</li>
+            </ul>
+        </li>
+        <li><b>Temel Yoga Pozları (15 dakika):</b>
+            <ul>
+                <li>Tadasana (Dağ Pozu)</li>
+                <li>Adho Mukha Svanasana (Aşağı Bakış Köpek Pozu)</li>
+                <li>Uttanasana (Öne Eğilme Pozu)</li>
+                <li>Bhujangasana (Yılan Pozu)</li>
+                <li>Balasana (Çocuk Pozu)</li>
+            </ul>
+        </li>
+        <li><b>Yoga Nidra (5 dakika):</b> Derin gevşeme ve meditasyon için yoga nidra yapın.</li>
+        <li><b>Esneklik ve Streç (5 dakika):</b> Vücudunuzu esnetin ve gevşetmek için çeşitli streç hareketleri yapın.</li>
+ 
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/pilate.png">';
+        result2Div.innerHTML =  `<div class ="program">
+           <b> Pilates: 30-45 dakika</b>
+        <li><b>Isınma (5 dakika):</b>
+            <ul>
+                <li>Düz sırt pozisyonunda nefes egzersizleri yapın.</li>
+                <li>Katılmak için yan taraflara doğru yatın ve bacaklarınızı bükün, ardından dizlerinizi göğsünüze doğru çekin.</li>
+            </ul>
+        </li>
+        <li><b>Temel Pilates Hareketleri (20 dakika):</b>
+            <ul>
+                <li><b>Bridge (Köprü Pozu):</b> Sırtüstü yatın, ayaklarınızı kalça genişliğinde açın ve ellerinizi yanınıza yerleştirin. Kalçanızı kaldırın, vücudunuz düz bir çizgi oluşturana kadar dizlerinizi bükün ve yavaşça indirin.</li>
+                <li><b>Leg Circles (Bacak Dairesi):</b> Sırt üstü yatın, bir bacağınızı yukarı kaldırın ve hafifçe dairesel hareketler yapın. Sonra diğer bacağınızı aynı şekilde hareket ettirin.</li>
+                <li><b>Pilates 100:</b> Sırt üstü yatın, bacaklarınızı 45 derece açıyla kaldırın ve kollarınızı yukarı doğru uzatın. Kollarınızı hızlı bir şekilde yukarı aşağı hareket ettirin, nefes alıp verin.</li>
+            </ul>
+        </li>
+        <li><b>Esneklik ve Streç (5 dakika):</b>
+            <ul>
+                <li>Katılmak için yan taraflara doğru yatın ve bacaklarınızı bükün, ardından dizlerinizi göğsünüze doğru çekin.</li>
+                <li>Katılmak için diğer yöne yatın ve aynı hareketi tekrarlayın.</li>
+            </ul>
+        </li>
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/thai.png">';
+            result3Div.innerHTML =  `<div class ="program">
+               <b> Tai Chi:</b> 30-45 dakika
+               <li><b>Isınma (5 dakika):</b>
+            <ul>
+                <li>Dik durun ve derin nefes alıp verin, bedeninizi ve zihninizi rahatlatın.</li>
+                <li>Yavaşça kollarınızı açarak omuzlarınızı döndürün, eklemlerinizi esnetin.</li>
+                <li>Ayakta durarak hafifçe dizlerinizi bükün, vücudunuzun merkezini bulun ve dengeyi sağlayın.</li>
+            </ul>
+        </li>
+        <li><b>Temel Thai Chi Hareketleri (20 dakika):</b>
+            <ul>
+                <li><b>Bağ Bozumu (Grasping the Sparrow's Tail):</b> Ayaklarınızı omuz genişliğinde açın, kollarınızı yavaşça yukarı kaldırın ve bedeninizi döndürerek sanki bir kuşu kavrar gibi ellerinizi yere doğru indirin.</li>
+                <li><b>Yılanın Kuyruğu (Parting the Wild Horse's Mane):</b> Ayaklarınızı birbirine yaklaştırın, bedeninizi döndürerek bir elinizi öne doğru uzatın ve diğer elinizle kavrayın, sonra diğer tarafa dönerek aynı hareketi tekrarlayın.</li>
+                <li><b>Kum Torbası Vurumu (Striking the Drum):</b> Ayaklarınızı omuz genişliğinde açın, ellerinizi yumruk yapın ve yavaşça vücudunuzun önünde bir vuruş gibi hafifçe indirin.</li>
+            </ul>
+        </li>
+        <li><b>Derin Nefes ve Meditasyon (5 dakika):</b>
+            <ul>
+                <li>Ayakta veya oturarak, gözlerinizi kapatın ve derin nefes alıp verin.</li>
+                <li>Akışta kalmaya odaklanın, bedeninizin enerjisini hissedin ve huzur içinde olun.</li>
+            </ul>
+        </li>
+    
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/esneme.png">';
+            result4Div.innerHTML =  `<div class ="program">
+               <b> Esneme Hareketleri:</b> 15-30 dakika
+               <li><b>Genel Esneme (5 dakika):</b>
+            <ul>
+                <li>Dik durun ve derin bir nefes alın, ardından yavaşça nefesinizi verin.</li>
+                <li>Kollarınızı yukarı kaldırarak göğsünüzü açın ve omuzlarınızı gerin.</li>
+                <li>Kollarınızı yanlara doğru açın ve yan taraflara eğilerek yan vücut esnemesi yapın.</li>
+                <li>Ayaklarınızı omuz genişliğinde açarak yavaşça dizlerinizi bükün ve kalça ve kasıklarınızı esnetin.</li>
+                <li>Sırt üstü yatın, bir bacağınızı kaldırarak hamstring (arka bacak) esnemesi yapın, ardından diğer bacakla aynı hareketi yapın.</li>
+            </ul>
+        </li>
+        <li><b>Bel ve Sırt Esnemeleri (5 dakika):</b>
+            <ul>
+                <li>Yerde oturun ve bacaklarınızı uzatın, yavaşça öne doğru eğilerek bel esnemesi yapın.</li>
+                <li>Sırt üstü yatın, bir dizinizi göğsünüze doğru çekin ve karşı taraftan çekin, belinizi ve kalçanızı esnetin.</li>
+                <li>Sırt üstü yatın ve bacaklarınızı bükerek ayak tabanlarınızı yere yerleştirin, dizlerinizi sağa ve sola doğru çevirerek bel ve sırt esnemesi yapın.</li>
+            </ul>
+        </li>
+        <li><b>Omuz ve Boyun Esnemeleri (5 dakika):</b>
+            <ul>
+                <li>Dik durun ve omuzlarınızı geriye doğru yuvarlayarak omuz esnemesi yapın.</li>
+                <li>Kollarınızı arkaya doğru uzatın ve ellerinizi birleştirerek omuz ve kol esnemesi yapın.</li>
+                <li>Boyunuzu sağa ve sola doğru eğerek boyun esnemesi yapın, ardından yukarı ve aşağı doğru esnemeler yapın.</li>
+            </ul>
+        </li>
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/top.png">';
+            result5Div.innerHTML =  `<div class ="program">
+                <b>Denge Topu Egzersizleri:</b> 15-30 dakika
+                <li><b>Isınma (3 dakika):</b>
+            <ul>
+                <li>Denge topu üzerinde dengeli bir şekilde durarak derin nefes alıp verin, bedeninizi dengeleyin.</li>
+                <li>Ayaklarınızı omuz genişliğinde açarak hafifçe dizlerinizi bükün, vücudunuzun merkezini bulun ve dengeyi sağlayın.</li>
+            </ul>
+        </li>
+        <li><b>Temel Denge Topu Hareketleri (9 dakika):</b>
+            <ul>
+                <li><b>Squat (Diz Çökme):</b> Denge topu üzerinde dik durun ve ellerinizi yanlara doğru uzatarak squat pozisyonuna inin, dizlerinizi 90 derece bükün ve yavaşça yukarı doğru kalkın.</li>
+                <li><b>Plank (Tahta Pozisyonu):</b> Ellerinizi denge topunun üzerine yerleştirin ve vücudunuzu düz bir çizgi oluşturacak şekilde plank pozisyonunda tutun, karın kaslarınızı sıkın ve bu pozisyonda kalın.</li>
+                <li><b>Lunges (Adım Atma):</b> Denge topu üzerinde bir adım atın ve bir dizinizi yere doğru bükün, diğer bacağınızı geriye doğru itin ve tekrar başlangıç pozisyonuna dönün.</li>
+            </ul>
+        </li>
+        <li><b>Esneklik ve Streç (3 dakika):</b>
+            <ul>
+                <li>Denge topunun üzerinde oturun ve bacaklarınızı uzatarak hamstring (arka bacak) esnemesi yapın.</li>
+                <li>Denge topu üzerinde belinizi yavaşça öne ve arkaya doğru esnetin.</li>
+                <li>Yere oturun ve denge topunun üzerinde yavaşça geriye doğru esneyin, belinizi ve sırtınızı esnetin.</li>
+            </ul>
+        </li>
+            </div>`;
+
+      
+
+ 
+    } else if (sonuc >= 120 && sonuc < 140) {
+        resimDiv.innerHTML += '<img src="images/yoga.png">';
+        resultDiv.innerHTML = `<div class ="program">
+           <b> Yoga:</b> 30-60 dakika
+        <li><b>Isınma (5 dakika):</b>
+            <ul>
+                <li>Güneşe Selam (Surya Namaskar) serisini 5 kez tekrarlayın.</li>
+                <li>Dinamik nefes egzersizleri yapın.</li>
+            </ul>
+        </li>
+        <li><b>Temel Yoga Pozları (15 dakika):</b>
+            <ul>
+                <li>Tadasana (Dağ Pozu)</li>
+                <li>Adho Mukha Svanasana (Aşağı Bakış Köpek Pozu)</li>
+                <li>Uttanasana (Öne Eğilme Pozu)</li>
+                <li>Bhujangasana (Yılan Pozu)</li>
+                <li>Balasana (Çocuk Pozu)</li>
+            </ul>
+        </li>
+        <li><b>Yoga Nidra (5 dakika):</b> Derin gevşeme ve meditasyon için yoga nidra yapın.</li>
+        <li><b>Esneklik ve Streç (5 dakika):</b> Vücudunuzu esnetin ve gevşetmek için çeşitli streç hareketleri yapın.</li>
+    
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/pilate.png">';
+        result2Div.innerHTML =  `<div class ="program">
+            <b>Pilates:  30-60 dakika</b>
+        
+        <li><b>Isınma (5 dakika):</b>
+            <ul>
+                <li>Düz sırt pozisyonunda nefes egzersizleri yapın.</li>
+                <li>Katılmak için yan taraflara doğru yatın ve bacaklarınızı bükün, ardından dizlerinizi göğsünüze doğru çekin.</li>
+            </ul>
+        </li>
+        <li><b>Temel Pilates Hareketleri (20 dakika):</b>
+            <ul>
+                <li><b>Bridge (Köprü Pozu):</b> Sırtüstü yatın, ayaklarınızı kalça genişliğinde açın ve ellerinizi yanınıza yerleştirin. Kalçanızı kaldırın, vücudunuz düz bir çizgi oluşturana kadar dizlerinizi bükün ve yavaşça indirin.</li>
+                <li><b>Leg Circles (Bacak Dairesi):</b> Sırt üstü yatın, bir bacağınızı yukarı kaldırın ve hafifçe dairesel hareketler yapın. Sonra diğer bacağınızı aynı şekilde hareket ettirin.</li>
+                <li><b>Pilates 100:</b> Sırt üstü yatın, bacaklarınızı 45 derece açıyla kaldırın ve kollarınızı yukarı doğru uzatın. Kollarınızı hızlı bir şekilde yukarı aşağı hareket ettirin, nefes alıp verin.</li>
+            </ul>
+        </li>
+        <li><b>Esneklik ve Streç (5 dakika):</b>
+            <ul>
+                <li>Katılmak için yan taraflara doğru yatın ve bacaklarınızı bükün, ardından dizlerinizi göğsünüze doğru çekin.</li>
+                <li>Katılmak için diğer yöne yatın ve aynı hareketi tekrarlayın.</li>
+            </ul>
+        </li>
+  
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/thai.png">';
+            result3Div.innerHTML =  `<div class ="program">
+              <b> Tai Chi:</b> 30-60 dakika
+              <li><b>Isınma (5 dakika):</b>
+            <ul>
+                <li>Dik durun ve derin nefes alıp verin, bedeninizi ve zihninizi rahatlatın.</li>
+                <li>Yavaşça kollarınızı açarak omuzlarınızı döndürün, eklemlerinizi esnetin.</li>
+                <li>Ayakta durarak hafifçe dizlerinizi bükün, vücudunuzun merkezini bulun ve dengeyi sağlayın.</li>
+            </ul>
+        </li>
+        <li><b>Temel Thai Chi Hareketleri (20 dakika):</b>
+            <ul>
+                <li><b>Bağ Bozumu (Grasping the Sparrow's Tail):</b> Ayaklarınızı omuz genişliğinde açın, kollarınızı yavaşça yukarı kaldırın ve bedeninizi döndürerek sanki bir kuşu kavrar gibi ellerinizi yere doğru indirin.</li>
+                <li><b>Yılanın Kuyruğu (Parting the Wild Horse's Mane):</b> Ayaklarınızı birbirine yaklaştırın, bedeninizi döndürerek bir elinizi öne doğru uzatın ve diğer elinizle kavrayın, sonra diğer tarafa dönerek aynı hareketi tekrarlayın.</li>
+                <li><b>Kum Torbası Vurumu (Striking the Drum):</b> Ayaklarınızı omuz genişliğinde açın, ellerinizi yumruk yapın ve yavaşça vücudunuzun önünde bir vuruş gibi hafifçe indirin.</li>
+            </ul>
+        </li>
+        <li><b>Derin Nefes ve Meditasyon (5 dakika):</b>
+            <ul>
+                <li>Ayakta veya oturarak, gözlerinizi kapatın ve derin nefes alıp verin.</li>
+                <li>Akışta kalmaya odaklanın, bedeninizin enerjisini hissedin ve huzur içinde olun.</li>
+            </ul>
+        </li>
+
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/esneme.png">';
+            result4Div.innerHTML =  `<div class ="program">
+               <b> Esneme Hareketleri:</b> 15-30 dakika
+               <li><b>Genel Esneme (5 dakika):</b>
+            <ul>
+                <li>Dik durun ve derin bir nefes alın, ardından yavaşça nefesinizi verin.</li>
+                <li>Kollarınızı yukarı kaldırarak göğsünüzü açın ve omuzlarınızı gerin.</li>
+                <li>Kollarınızı yanlara doğru açın ve yan taraflara eğilerek yan vücut esnemesi yapın.</li>
+                <li>Ayaklarınızı omuz genişliğinde açarak yavaşça dizlerinizi bükün ve kalça ve kasıklarınızı esnetin.</li>
+                <li>Sırt üstü yatın, bir bacağınızı kaldırarak hamstring (arka bacak) esnemesi yapın, ardından diğer bacakla aynı hareketi yapın.</li>
+            </ul>
+        </li>
+        <li><b>Bel ve Sırt Esnemeleri (5 dakika):</b>
+            <ul>
+                <li>Yerde oturun ve bacaklarınızı uzatın, yavaşça öne doğru eğilerek bel esnemesi yapın.</li>
+                <li>Sırt üstü yatın, bir dizinizi göğsünüze doğru çekin ve karşı taraftan çekin, belinizi ve kalçanızı esnetin.</li>
+                <li>Sırt üstü yatın ve bacaklarınızı bükerek ayak tabanlarınızı yere yerleştirin, dizlerinizi sağa ve sola doğru çevirerek bel ve sırt esnemesi yapın.</li>
+            </ul>
+        </li>
+        <li><b>Omuz ve Boyun Esnemeleri (5 dakika):</b>
+            <ul>
+                <li>Dik durun ve omuzlarınızı geriye doğru yuvarlayarak omuz esnemesi yapın.</li>
+                <li>Kollarınızı arkaya doğru uzatın ve ellerinizi birleştirerek omuz ve kol esnemesi yapın.</li>
+                <li>Boyunuzu sağa ve sola doğru eğerek boyun esnemesi yapın, ardından yukarı ve aşağı doğru esnemeler yapın.</li>
+            </ul>
+        </li>
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/top.png">';
+            result5Div.innerHTML =  `<div class ="program">
+                <b>Denge Topu Egzersizleri:</b> 15-30 dakika
+                <li><b>Isınma (3 dakika):</b>
+            <ul>
+                <li>Denge topu üzerinde dengeli bir şekilde durarak derin nefes alıp verin, bedeninizi dengeleyin.</li>
+                <li>Ayaklarınızı omuz genişliğinde açarak hafifçe dizlerinizi bükün, vücudunuzun merkezini bulun ve dengeyi sağlayın.</li>
+            </ul>
+        </li>
+        <li><b>Temel Denge Topu Hareketleri (9 dakika):</b>
+            <ul>
+                <li><b>Squat (Diz Çökme):</b> Denge topu üzerinde dik durun ve ellerinizi yanlara doğru uzatarak squat pozisyonuna inin, dizlerinizi 90 derece bükün ve yavaşça yukarı doğru kalkın.</li>
+                <li><b>Plank (Tahta Pozisyonu):</b> Ellerinizi denge topunun üzerine yerleştirin ve vücudunuzu düz bir çizgi oluşturacak şekilde plank pozisyonunda tutun, karın kaslarınızı sıkın ve bu pozisyonda kalın.</li>
+                <li><b>Lunges (Adım Atma):</b> Denge topu üzerinde bir adım atın ve bir dizinizi yere doğru bükün, diğer bacağınızı geriye doğru itin ve tekrar başlangıç pozisyonuna dönün.</li>
+            </ul>
+        </li>
+        <li><b>Esneklik ve Streç (3 dakika):</b>
+            <ul>
+                <li>Denge topunun üzerinde oturun ve bacaklarınızı uzatarak hamstring (arka bacak) esnemesi yapın.</li>
+                <li>Denge topu üzerinde belinizi yavaşça öne ve arkaya doğru esnetin.</li>
+                <li>Yere oturun ve denge topunun üzerinde yavaşça geriye doğru esneyin, belinizi ve sırtınızı esnetin.</li>
+            </ul>
+        </li>
+            </div>`;
+
+
+
+
+    } else if (sonuc >= 140 && sonuc <160){
+        resimDiv.innerHTML += '<img src="images/yoga.png">';
+        resultDiv.innerHTML = `<div class ="program">
+           <b> Yoga:</b> 45-60 dakika
+
+        <li><b>Isınma (10 dakika):</b>
+            <ul>
+                <li>Güneşe Selam (Surya Namaskar) serisini 3-5 kez tekrarlayın.</li>
+                <li>Dinamik nefes egzersizleri yapın.</li>
+                <li>Gövde dönme ve boyun esnetme hareketleri yapın.</li>
+            </ul>
+        </li>
+        <li><b>Temel Yoga Pozları (20 dakika):</b>
+            <ul>
+                <li>Tadasana (Dağ Pozu)</li>
+                <li>Adho Mukha Svanasana (Aşağı Bakış Köpek Pozu)</li>
+                <li>Uttanasana (Öne Eğilme Pozu)</li>
+                <li>Bhujangasana (Yılan Pozu)</li>
+                <li>Balasana (Çocuk Pozu)</li>
+                <li>Virabhadrasana I (Kahraman Pozu I)</li>
+                <li>Virabhadrasana II (Kahraman Pozu II)</li>
+            </ul>
+        </li>
+        <li><b>Güç ve Esneklik (10 dakika):</b>
+            <ul>
+                <li>Warrior III (Kahraman III Pozu)</li>
+                <li>Tree Pose (Ağaç Pozu)</li>
+                <li>Plank (Şınav Pozu)</li>
+            </ul>
+        </li>
+        <li><b>Yoga Nidra ve Meditasyon (5 dakika):</b> Derin gevşeme ve meditasyon için yoga nidra yapın.</li>
+    
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/pilate.png">';
+        result2Div.innerHTML =  `<div class ="program">
+           <b> Pilates:</b> 45-60 dakika
+         
+        <li><b>Isınma (7 dakika):</b>
+            <ul>
+                <li>Düz sırt pozisyonunda nefes egzersizleri yapın.</li>
+                <li>Katılmak için yan taraflara doğru yatın ve bacaklarınızı bükün, ardından dizlerinizi göğsünüze doğru çekin.</li>
+                <li>Eller ve dizler üzerinde durun, kedi ve inek pozisyonlarını (cat-cow) tekrarlayın.</li>
+            </ul>
+        </li>
+        <li><b>Temel Pilates Hareketleri (30 dakika):</b>
+            <ul>
+                <li><b>Bridge (Köprü Pozu):</b> Sırtüstü yatın, ayaklarınızı kalça genişliğinde açın ve ellerinizi yanınıza yerleştirin. Kalçanızı kaldırın, vücudunuz düz bir çizgi oluşturana kadar dizlerinizi bükün ve yavaşça indirin.</li>
+                <li><b>Leg Circles (Bacak Dairesi):</b> Sırt üstü yatın, bir bacağınızı yukarı kaldırın ve hafifçe dairesel hareketler yapın. Sonra diğer bacağınızı aynı şekilde hareket ettirin.</li>
+                <li><b>Pilates 100:</b> Sırt üstü yatın, bacaklarınızı 45 derece açıyla kaldırın ve kollarınızı yukarı doğru uzatın. Kollarınızı hızlı bir şekilde yukarı aşağı hareket ettirin, nefes alıp verin.</li>
+                <li><b>Swan Dive (Kuğu Dalışı):</b> Sırt üstü yatın, kollarınızı uzatın ve başınızı ve bacaklarınızı yukarı kaldırarak vücudunuzu uzatın.</li>
+            </ul>
+        </li>
+        <li><b>Esneklik ve Streç (8 dakika):</b>
+            <ul>
+                <li>Katılmak için yan taraflara doğru yatın ve bacaklarınızı bükün, ardından dizlerinizi göğsünüze doğru çekin.</li>
+                <li>Katılmak için diğer yöne yatın ve aynı hareketi tekrarlayın.</li>
+                <li>Katılmak için sırt üstü yatın ve bacaklarınızı uzatın, kollarınızı başınızın üzerine doğru uzatın ve vücudunuzu gerin.</li>
+            </ul>
+        </li>
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/thai.png">';
+            result3Div.innerHTML =  `<div class ="program">
+               <b> Tai Chi:</b> 45-60 dakika
+               
+        <li><b>Isınma (7 dakika):</b>
+            <ul>
+                <li>Dik durun ve derin nefes alıp verin, bedeninizi ve zihninizi rahatlatın.</li>
+                <li>Yavaşça kollarınızı açarak omuzlarınızı döndürün, eklemlerinizi esnetin.</li>
+                <li>Ayakta durarak hafifçe dizlerinizi bükün, vücudunuzun merkezini bulun ve dengeyi sağlayın.</li>
+                <li>Kollarınızı yavaşça yukarı kaldırarak gökyüzüne doğru uzanın, sonra yavaşça aşağı indirin.</li>
+            </ul>
+        </li>
+        <li><b>Temel Thai Chi Hareketleri (30 dakika):</b>
+            <ul>
+                <li><b>Bağ Bozumu (Grasping the Sparrow's Tail):</b> Ayaklarınızı omuz genişliğinde açın, kollarınızı yavaşça yukarı kaldırın ve bedeninizi döndürerek sanki bir kuşu kavrar gibi ellerinizi yere doğru indirin.</li>
+                <li><b>Yılanın Kuyruğu (Parting the Wild Horse's Mane):</b> Ayaklarınızı birbirine yaklaştırın, bedeninizi döndürerek bir elinizi öne doğru uzatın ve diğer elinizle kavrayın, sonra diğer tarafa dönerek aynı hareketi tekrarlayın.</li>
+                <li><b>Kum Torbası Vurumu (Striking the Drum):</b> Ayaklarınızı omuz genişliğinde açın, ellerinizi yumruk yapın ve yavaşça vücudunuzun önünde bir vuruş gibi hafifçe indirin.</li>
+                <li><b>Kartalın Uçuşu (Flying Like a Bird):</b> Ayakta durun ve kollarınızı yavaşça yukarı kaldırın, sonra dengede kalırken bir bacağınızı geriye doğru hareket ettirin ve gövdenizle uyum içinde dengeyi sağlayın.</li>
+            </ul>
+        </li>
+        <li><b>Derin Nefes ve Meditasyon (8 dakika):</b>
+            <ul>
+                <li>Ayakta veya oturarak, gözlerinizi kapatın ve derin nefes alıp verin.</li>
+                <li>Akışta kalmaya odaklanın, bedeninizin enerjisini hissedin ve huzur içinde olun.</li>
+                <li>Bu sırada içsel denge ve uyumu arayın.</li>
+            </ul>
+        </li>
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/esneme.png">';
+            result4Div.innerHTML =  `<div class ="program">
+               <b> Esneme Hareketleri:</b> 15-30 dakika
+               <li><b>Genel Esneme (5 dakika):</b>
+            <ul>
+                <li>Dik durun ve derin bir nefes alın, ardından yavaşça nefesinizi verin.</li>
+                <li>Kollarınızı yukarı kaldırarak göğsünüzü açın ve omuzlarınızı gerin.</li>
+                <li>Kollarınızı yanlara doğru açın ve yan taraflara eğilerek yan vücut esnemesi yapın.</li>
+                <li>Ayaklarınızı omuz genişliğinde açarak yavaşça dizlerinizi bükün ve kalça ve kasıklarınızı esnetin.</li>
+                <li>Sırt üstü yatın, bir bacağınızı kaldırarak hamstring (arka bacak) esnemesi yapın, ardından diğer bacakla aynı hareketi yapın.</li>
+            </ul>
+        </li>
+        <li><b>Bel ve Sırt Esnemeleri (5 dakika):</b>
+            <ul>
+                <li>Yerde oturun ve bacaklarınızı uzatın, yavaşça öne doğru eğilerek bel esnemesi yapın.</li>
+                <li>Sırt üstü yatın, bir dizinizi göğsünüze doğru çekin ve karşı taraftan çekin, belinizi ve kalçanızı esnetin.</li>
+                <li>Sırt üstü yatın ve bacaklarınızı bükerek ayak tabanlarınızı yere yerleştirin, dizlerinizi sağa ve sola doğru çevirerek bel ve sırt esnemesi yapın.</li>
+            </ul>
+        </li>
+        <li><b>Omuz ve Boyun Esnemeleri (5 dakika):</b>
+            <ul>
+                <li>Dik durun ve omuzlarınızı geriye doğru yuvarlayarak omuz esnemesi yapın.</li>
+                <li>Kollarınızı arkaya doğru uzatın ve ellerinizi birleştirerek omuz ve kol esnemesi yapın.</li>
+                <li>Boyunuzu sağa ve sola doğru eğerek boyun esnemesi yapın, ardından yukarı ve aşağı doğru esnemeler yapın.</li>
+            </ul>
+        </li>
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/top.png">';
+            result5Div.innerHTML =  `<div class ="program">
+              <b> Denge Topu Egzersizleri:</b> 15-30 dakika
+              <li><b>Isınma (3 dakika):</b>
+            <ul>
+                <li>Denge topu üzerinde dengeli bir şekilde durarak derin nefes alıp verin, bedeninizi dengeleyin.</li>
+                <li>Ayaklarınızı omuz genişliğinde açarak hafifçe dizlerinizi bükün, vücudunuzun merkezini bulun ve dengeyi sağlayın.</li>
+            </ul>
+        </li>
+        <li><b>Temel Denge Topu Hareketleri (9 dakika):</b>
+            <ul>
+                <li><b>Squat (Diz Çökme):</b> Denge topu üzerinde dik durun ve ellerinizi yanlara doğru uzatarak squat pozisyonuna inin, dizlerinizi 90 derece bükün ve yavaşça yukarı doğru kalkın.</li>
+                <li><b>Plank (Tahta Pozisyonu):</b> Ellerinizi denge topunun üzerine yerleştirin ve vücudunuzu düz bir çizgi oluşturacak şekilde plank pozisyonunda tutun, karın kaslarınızı sıkın ve bu pozisyonda kalın.</li>
+                <li><b>Lunges (Adım Atma):</b> Denge topu üzerinde bir adım atın ve bir dizinizi yere doğru bükün, diğer bacağınızı geriye doğru itin ve tekrar başlangıç pozisyonuna dönün.</li>
+            </ul>
+        </li>
+        <li><b>Esneklik ve Streç (3 dakika):</b>
+            <ul>
+                <li>Denge topunun üzerinde oturun ve bacaklarınızı uzatarak hamstring (arka bacak) esnemesi yapın.</li>
+                <li>Denge topu üzerinde belinizi yavaşça öne ve arkaya doğru esnetin.</li>
+                <li>Yere oturun ve denge topunun üzerinde yavaşça geriye doğru esneyin, belinizi ve sırtınızı esnetin.</li>
+            </ul>
+        </li>
+            </div>`;
+
+    
+ } else {
+    resimDiv.innerHTML += '<img src="images/yoga.png">';
+        resultDiv.innerHTML = `<div class ="program">
+            <b>Yoga: 60 dakika veya daha fazla</b>
+        <li><b>Isınma (10 dakika):</b>
+            <ul>
+                <li>Güneşe Selam (Surya Namaskar) serisini 5-7 kez tekrarlayın.</li>
+                <li>Dinamik nefes egzersizleri yapın.</li>
+                <li>Gövde dönme, boyun ve omuz esnetme hareketleri yapın.</li>
+            </ul>
+        </li>
+        <li><b>Temel Yoga Pozları (25 dakika):</b>
+           <ul> 
+                <li>Tadasana (Dağ Pozu)</li>
+                <li>Adho Mukha Svanasana (Aşağı Bakış Köpek Pozu)</li>
+                <li>Uttanasana (Öne Eğilme Pozu)</li>
+                <li>Bhujangasana (Yılan Pozu)</li>
+                <li>Balasana (Çocuk Pozu)</li>
+                <li>Virabhadrasana I (Kahraman Pozu I)</li>
+                <li>Virabhadrasana II (Kahraman Pozu II)</li>
+                <li>Trikonasana (Üçgen Pozu)</li>
+            </ul>
+        </li>
+        <li><b>Güç ve Esneklik (15 dakika):</b>
+            <ul>
+                <li>Warrior III (Kahraman III Pozu)</li>
+                <li>Tree Pose (Ağaç Pozu)</li>
+                <li>Plank (Şınav Pozu)</li>
+                <li>Bridge Pose (Köprü Pozu)</li>
+            </ul>
+        </li>
+        <li><b>Yoga Nidra ve Meditasyon (10 dakika):</b> Derin gevşeme ve meditasyon için yoga nidra yapın.</li>
+            </div>`;
+
+        resim2Div.innerHTML += '<img src="images/pilate.png">';
+        result2Div.innerHTML =  `<div class ="program">
+            <b>Pilates:</b> 60 dakika veya daha fazla
+        <li><b>Isınma (10 dakika):</b>
+            <ul>
+                <li>Düz sırt pozisyonunda nefes egzersizleri yapın.</li>
+                <li>Katılmak için yan taraflara doğru yatın ve bacaklarınızı bükün, ardından dizlerinizi göğsünüze doğru çekin.</li>
+                <li>Eller ve dizler üzerinde durun, kedi ve inek pozisyonlarını (cat-cow) tekrarlayın.</li>
+            </ul>
+        </li>
+        <li><b>Temel Pilates Hareketleri (40 dakika):</b>
+            <ul>
+                <li><b>Bridge (Köprü Pozu):</b> Sırtüstü yatın, ayaklarınızı kalça genişliğinde açın ve ellerinizi yanınıza yerleştirin. Kalçanızı kaldırın, vücudunuz düz bir çizgi oluşturana kadar dizlerinizi bükün ve yavaşça indirin.</li>
+                <li><b>Leg Circles (Bacak Dairesi):</b> Sırt üstü yatın, bir bacağınızı yukarı kaldırın ve hafifçe dairesel hareketler yapın. Sonra diğer bacağınızı aynı şekilde hareket ettirin.</li>
+                <li><b>Pilates 100:</b> Sırt üstü yatın, bacaklarınızı 45 derece açıyla kaldırın ve kollarınızı yukarı doğru uzatın. Kollarınızı hızlı bir şekilde yukarı aşağı hareket ettirin, nefes alıp verin.</li>
+                <li><b>Swan Dive (Kuğu Dalışı):</b> Sırt üstü yatın, kollarınızı uzatın ve başınızı ve bacaklarınızı yukarı kaldırarak vücudunuzu uzatın.</li>
+                <li><b>Roll Up:</b> Sırt üstü yatın, kollarınızı başınızın üzerine doğru uzatın ve vücudunuzu kaldırarak oturun. Daha sonra yavaşça geriye doğru yatın.</li>
+            </ul>
+        </li>
+    
+           
+        </li>
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/thai.png">';
+            result3Div.innerHTML =  `<div class ="program">
+                <b>  Tai Chi:</b> 60 dakika veya daha fazla
+                <li><b>Isınma (10 dakika):</b>
+            <ul>
+                <li>Dik durun ve derin nefes alıp verin, bedeninizi ve zihninizi rahatlatın.</li>
+                <li>Yavaşça kollarınızı açarak omuzlarınızı döndürün, eklemlerinizi esnetin.</li>
+                <li>Ayakta durarak hafifçe dizlerinizi bükün, vücudunuzun merkezini bulun ve dengeyi sağlayın.</li>
+                <li>Kollarınızı yavaşça yukarı kaldırarak gökyüzüne doğru uzanın, sonra yavaşça aşağı indirin.</li>
+            </ul>
+        </li>
+        <li><b>Temel Thai Chi Hareketleri (40 dakika):</b>
+            <ul>
+                <li><b>Bağ Bozumu (Grasping the Sparrow's Tail):</b> Ayaklarınızı omuz genişliğinde açın, kollarınızı yavaşça yukarı kaldırın ve bedeninizi döndürerek sanki bir kuşu kavrar gibi ellerinizi yere doğru indirin.</li>
+                <li><b>Yılanın Kuyruğu (Parting the Wild Horse's Mane):</b> Ayaklarınızı birbirine yaklaştırın, bedeninizi döndürerek bir elinizi öne doğru uzatın ve diğer elinizle kavrayın, sonra diğer tarafa dönerek aynı hareketi tekrarlayın.</li>
+                <li><b>Kum Torbası Vurumu (Striking the Drum):</b> Ayaklarınızı omuz genişliğinde açın, ellerinizi yumruk yapın ve yavaşça vücudunuzun önünde bir vuruş gibi hafifçe indirin.</li>
+                <li><b>Kartalın Uçuşu (Flying Like a Bird):</b> Ayakta durun ve kollarınızı yavaşça yukarı kaldırın, sonra dengede kalırken bir bacağınızı geriye doğru hareket ettirin ve gövdenizle uyum içinde dengeyi sağlayın.</li>
+
+            </ul>
+        </li>
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/esneme.png">';
+            result4Div.innerHTML =  `<div class ="program">
+                <b>  Esneme Hareketleri:</b> 15-30 dakika
+                <li><b>Genel Esneme (5 dakika):</b>
+            <ul>
+                <li>Dik durun ve derin bir nefes alın, ardından yavaşça nefesinizi verin.</li>
+                <li>Kollarınızı yukarı kaldırarak göğsünüzü açın ve omuzlarınızı gerin.</li>
+                <li>Kollarınızı yanlara doğru açın ve yan taraflara eğilerek yan vücut esnemesi yapın.</li>
+                <li>Ayaklarınızı omuz genişliğinde açarak yavaşça dizlerinizi bükün ve kalça ve kasıklarınızı esnetin.</li>
+                <li>Sırt üstü yatın, bir bacağınızı kaldırarak hamstring (arka bacak) esnemesi yapın, ardından diğer bacakla aynı hareketi yapın.</li>
+            </ul>
+        </li>
+        <li><b>Bel ve Sırt Esnemeleri (5 dakika):</b>
+            <ul>
+                <li>Yerde oturun ve bacaklarınızı uzatın, yavaşça öne doğru eğilerek bel esnemesi yapın.</li>
+                <li>Sırt üstü yatın, bir dizinizi göğsünüze doğru çekin ve karşı taraftan çekin, belinizi ve kalçanızı esnetin.</li>
+                <li>Sırt üstü yatın ve bacaklarınızı bükerek ayak tabanlarınızı yere yerleştirin, dizlerinizi sağa ve sola doğru çevirerek bel ve sırt esnemesi yapın.</li>
+            </ul>
+        </li>
+        <li><b>Omuz ve Boyun Esnemeleri (5 dakika):</b>
+            <ul>
+                <li>Dik durun ve omuzlarınızı geriye doğru yuvarlayarak omuz esnemesi yapın.</li>
+                <li>Kollarınızı arkaya doğru uzatın ve ellerinizi birleştirerek omuz ve kol esnemesi yapın.</li>
+                <li>Boyunuzu sağa ve sola doğru eğerek boyun esnemesi yapın, ardından yukarı ve aşağı doğru esnemeler yapın.</li>
+            </ul>
+        </li>
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/top.png">';
+            result5Div.innerHTML =  `<div class ="program">
+                <b> Denge Topu Egzersizleri:</b> 15-30 dakika
+                <li><b>Isınma (3 dakika):</b>
+            <ul>
+                <li>Denge topu üzerinde dengeli bir şekilde durarak derin nefes alıp verin, bedeninizi dengeleyin.</li>
+                <li>Ayaklarınızı omuz genişliğinde açarak hafifçe dizlerinizi bükün, vücudunuzun merkezini bulun ve dengeyi sağlayın.</li>
+            </ul>
+        </li>
+        <li><b>Temel Denge Topu Hareketleri (9 dakika):</b>
+            <ul>
+                <li><b>Squat (Diz Çökme):</b> Denge topu üzerinde dik durun ve ellerinizi yanlara doğru uzatarak squat pozisyonuna inin, dizlerinizi 90 derece bükün ve yavaşça yukarı doğru kalkın.</li>
+                <li><b>Plank (Tahta Pozisyonu):</b> Ellerinizi denge topunun üzerine yerleştirin ve vücudunuzu düz bir çizgi oluşturacak şekilde plank pozisyonunda tutun, karın kaslarınızı sıkın ve bu pozisyonda kalın.</li>
+                <li><b>Lunges (Adım Atma):</b> Denge topu üzerinde bir adım atın ve bir dizinizi yere doğru bükün, diğer bacağınızı geriye doğru itin ve tekrar başlangıç pozisyonuna dönün.</li>
+            </ul>
+        </li>
+        <li><b>Esneklik ve Streç (3 dakika):</b>
+            <ul>
+                <li>Denge topunun üzerinde oturun ve bacaklarınızı uzatarak hamstring (arka bacak) esnemesi yapın.</li>
+                <li>Denge topu üzerinde belinizi yavaşça öne ve arkaya doğru esnetin.</li>
+                <li>Yere oturun ve denge topunun üzerinde yavaşça geriye doğru esneyin, belinizi ve sırtınızı esnetin.</li>
+            </ul>
+        </li>
+            </div>`;
+
+    }
+
+
+</script>
+
+</body>
+</html>

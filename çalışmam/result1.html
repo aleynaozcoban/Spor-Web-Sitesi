@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/ustmenu.css">
+	<link rel="stylesheet" type="text/css" href="css/logo.css">
+	<link rel="stylesheet" type="text/css" href="css/altmenu.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<link rel="stylesheet" type="text/css" href="css/hizmetler.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/javas.css">
+  
+	<title>DynamicYou - Egzersiz Programı</title>
+
+</head>
+<div>
+
+<div class="logo"><img src="images/logo.png"></div>
+<div class="ustmenu">
+    <div class="asdas" style="text-align: center;"><a href="#">Sağlıklı ve Fit Bir Yaşam İçin İlk Adımı Atın!</a></div>
+</div>
+<div class="altmenu">
+<div class="menu">
+	<ul>
+		<li><a href="index.html">Anasayfa</a></li>
+		<li><a href="hakkimizda.html">Hakkımızda</a></li>
+		<li><a href="beslenme.html">Beslenme Rehberi</a></li>
+		<li><a href="iletisim.html">İletişim</a></li>
+	</ul></div>
+
+</div>
+<div class="slider">
+</div>
+<h1>Karvonen Hesaplama Sonucu</h1>
+
+<div class="kapsam">
+<div id="resim"></div>
+<div id="result"></div>
+</div>
+<div class="kapsam">
+<div id="resim2"></div>
+<div id="result2"></div>
+</div>
+<div class="kapsam">
+<div id="resim3"></div>
+<div id="result3"></div>
+</div>
+<div class="kapsam">
+<div id="resim4"></div>
+<div id="result4"></div>
+</div>
+<div class="kapsam">
+<div id="resim5"></div>
+<div id="result5"></div>
+    </div>
+    
+<script>
+    // Yerel depolamadan sonucu al
+    var sonuc = localStorage.getItem("sonuc");
+
+    // Sonuca göre farklı yazı ve resim göster
+    var resultDiv = document.getElementById("result");
+    var resimDiv = document.getElementById("resim");
+    var result2Div = document.getElementById("result2");
+    var resim2Div = document.getElementById("resim2");
+    var result3Div = document.getElementById("result3");
+    var resim3Div = document.getElementById("resim3");
+    var result4Div = document.getElementById("result4");
+    var resim4Div = document.getElementById("resim4");
+    var result5Div = document.getElementById("result5");
+    var resim5Div = document.getElementById("resim5");
+  
+  
+    if (sonuc < 120) {
+        resimDiv.innerHTML += '<img src="images/benchpress.jpg">';
+        resultDiv.innerHTML = `<div class ="program">
+          <p><b>Bench Press:<b>3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)</p>
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/squat.png">';
+        result2Div.innerHTML =  `<div class ="program">
+            <p><b>Squat:</b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)</p>
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/deadlift.png">';
+            result3Div.innerHTML =  `<div class ="program">
+                <p><b>Deadlift:</b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)</p>
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/pullup.png">';
+            result4Div.innerHTML =  `<div class ="program">
+                <p><b>Pull-up:</b> 3x10 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 20-30 dakika)</p>
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/military.png">';
+            result5Div.innerHTML =  `<div class ="program">
+                <p><b>Military Press:<b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)</p>
+            </div>`;
+
+      
+
+ 
+    } else if (sonuc >= 120 && sonuc < 140) {
+        resimDiv.innerHTML += '<img src="images/benchpress.jpg">';
+        resultDiv.innerHTML = `<div class ="program">
+            <b>Bench Press:</b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/squat.png">';
+        result2Div.innerHTML =  `<div class ="program">
+            <b>Squat:</b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/deadlift.png">';
+            result3Div.innerHTML =  `<div class ="program">
+              <b>Deadlift:</b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/pullup.png">';
+            result4Div.innerHTML =  `<div class ="program">
+                <b>Pull-up:</b> 3x10 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 20-30 dakika)
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/military.png">';
+            result5Div.innerHTML =  `<div class ="program">
+               <b>Military Press:</b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)
+
+            </div>`;
+
+
+
+    } else if (sonuc >= 140 && sonuc <160){
+        resimDiv.innerHTML += '<img src="images/benchpress.jpg">';
+        resultDiv.innerHTML = `<div class ="program">
+           <b>Bench Press:</b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/squat.png">';
+        result2Div.innerHTML =  `<div class ="program">
+            <b>Squat:</b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/deadlift.png">';
+            result3Div.innerHTML =  `<div class ="program">
+            <b>Deadlift:</b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/pullup.png">';
+            result4Div.innerHTML =  `<div class ="program">
+                <b>Pull-up:</b> 3x10 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 20-30 dakika)
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/military.png">';
+            result5Div.innerHTML =  `<div class ="program">
+               <b>Military Press:</b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)
+            </div>`;
+    
+ } else {
+    resimDiv.innerHTML += '<img src="images/benchpress.jpg">';
+        resultDiv.innerHTML = `<div class ="program">
+            <b>Bench Press:</b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/squat.png">';
+        result2Div.innerHTML =  `<div class ="program">
+            <b>Squat:</b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/deadlift.png">';
+            result3Div.innerHTML =  `<div class ="program">
+             <b>Deadlift:</b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/pullup.png">';
+            result4Div.innerHTML =  `<div class ="program">
+               <b>Pull-up:</b> 3x10 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 20-30 dakika)
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/military.png">';
+            result5Div.innerHTML =  `<div class ="program">
+                <b>Military Press:</b> 3x12 tekrar, dinlenme süresi: 1-2 dakika (Toplam egzersiz süresi: 25-35 dakika)
+            </div>`;
+    }
+
+
+</script>
+
+</body>
+</html>

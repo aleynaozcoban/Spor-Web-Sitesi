@@ -1,0 +1,67 @@
+.iki{
+    margin: 0;
+    padding: 0;
+	width: 100%;
+	height: 700px;
+   
+}
+
+@media only screen and (max-width: 768px)  {
+.reklam{
+	display: none;
+}
+.görsel {
+	width: 100%;
+}
+.görsel img{
+	width: 100%;
+}
+
+.form{
+	width: 100%;
+}
+}
+
+.görsel{
+	background-color: #c7c7c7;
+	height: 350px;
+	width:100%;
+	
+
+}
+.görsel img{
+	height:350px;
+ object-fit:cover;
+ display: block; margin: auto;
+}
+
+.reklam{
+	width: 130.8px;
+	height: 350px;
+	background-color: black;
+	border-right-style:solid;
+	      border-width: 1px;
+      border-color: gray;
+	  float: left;
+    
+}
+.form{
+width: 200px;
+display: flex;  
+  flex-wrap: wrap;
+ color: white;
+display:flex;
+position: relative;
+margin: auto;}
+body{
+	font-family: Courier, monospace;
+}
+
+.formdiv{
+	height: 250px;
+	
+	width: 300px;
+	margin: 70px auto;
+	border: 2px solid white;
+	
+}

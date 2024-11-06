@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/ustmenu.css">
+	<link rel="stylesheet" type="text/css" href="css/logo.css">
+	<link rel="stylesheet" type="text/css" href="css/altmenu.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<link rel="stylesheet" type="text/css" href="css/hizmetler.css">
+    <link rel="stylesheet" type="text/css" href="css/formdiv.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<script src="https://kit.fontawesome.com/7db465f823.js" crossorigin="anonymous"></script>
+	   
+       <title>laçin ve aley</title>
+</head>
+<body>
+
+<div class="logo"><img src="images/logo.png"></div>
+<div class="ustmenu">
+	<div class="asdas"><a href="#">inan ne yazacagimi bilmiyorum</a></div>
+</div>
+<div class="altmenu">
+<div class="menu">
+	<ul>
+		<li><a href="index.html">Anasayfa</a></li>
+		<li><a href="hakkimizda.html">Hakkımızda</a></li>
+		<li><a href="beslenme.html">Beslenme Rehberi</a></li>
+		<li><a href="iletisim.html">İletişim</a></li>
+	</ul></div>
+<div class="login"><a href="#"> Giriş Yap</a></div>
+</div>
+<div class="iki">
+<div class="reklam"></div>
+<div class="görsel"><img src="images/form.jpg">
+</div>
+<div class="formdiv">
+	<form class="form" id="form">
+        <label for="yas">Yaşınız:</label> 
+        <input type="number" id="yas" name="yas" required><br><br>
+        
+        <label for="dinlenmeNabzi">Dinlenme Nabzınız:</label>
+        <input type="number" id="dinlenmeNabzi" name="dinlenmeNabzi" required><br><br>
+        
+        <label for="hedefYoğunluk">Hedef Yoğunluk(%):</label>
+        <input type="number" id="hedefYoğunluk" name="hedefYoğunluk" required><br><br>
+        
+		<a href="result3.html"><button type="button" onclick="hesaplaKarvonen()" id="calculateButton">Hesapla</button></a>
+    </form>
+</div>
+<script>
+    function hesaplaKarvonen() {
+        // Formdaki girişleri al
+        var yas = parseInt(document.getElementById("yas").value);
+        var dinlenmeNabzi = parseInt(document.getElementById("dinlenmeNabzi").value);
+        var hedefYoğunluk = parseInt(document.getElementById("hedefYoğunluk").value);
+
+        // Toplamı hesapla
+        var toplam = (220 - yas - dinlenmeNabzi) * hedefYoğunluk + dinlenmeNabzi;
+
+        // Sonucu yerel depolamada sakla
+        localStorage.setItem("sonuc", toplam);
+    }
+</script>
+
+
+</div>
+<footer class="footer">
+	<div class="footer-left col-md-4 col-sm-6">
+	  <p class="about">
+		<span> Hakkımızda</span> DynamicYou olarak, sağlıklı yaşam ve fitness hedeflerinize ulaşmanız için size özel çözümler sunuyoruz. Amacımız, her bireyin benzersiz ihtiyaçlarını ve hedeflerini göz önünde bulundurarak, en etkili ve uygun egzersiz programlarını oluşturmak ve bu süreçte yanınızda olmak.
+	  </p>
+	  <div class="icons">
+		<a href="#"><i class="fa fa-facebook"></i></a>
+		<a href="#"><i class="fa fa-twitter"></i></a>
+		
+		<a href="#"><i class="fa fa-instagram"></i></a>
+	  </div>
+	</div>
+	<div class="footer-center col-md-4 col-sm-6">
+	  <div>
+		<i class="fa fa-map-marker"></i>
+		<p>İstanbul, Türkiye</p>
+	  </div>
+	  <div>
+		<i class="fa fa-phone"></i>
+		<p> (+90) 533 144 2684</p>
+	  </div>
+	  <div>
+		<i class="fa fa-envelope"></i>
+		<p><a href="#"> office@dynamicyou.com</a></p>
+	  </div>
+	</div>
+	<div class="footer-right col-md-4 col-sm-6">
+	  <h2> Dynamic<span> You</span></h2>
+	  <p class="menu">
+		<a href="index.html"> Ana Sayfa</a> |
+		<a href="hakkimizda.html"> Hakkımızda</a> |
+		<a href="beslenme.html"> Beslenme Rehberi</a> |
+		<a href="iletisim.html"> İletişim</a>
+	  </p>
+	  <p class="name"> DynamicYou &copy; 2024</p>
+	</div>
+  </footer>
+
+</div>

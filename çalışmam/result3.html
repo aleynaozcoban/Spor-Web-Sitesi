@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/ustmenu.css">
+	<link rel="stylesheet" type="text/css" href="css/logo.css">
+	<link rel="stylesheet" type="text/css" href="css/altmenu.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<link rel="stylesheet" type="text/css" href="css/hizmetler.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/javas.css">
+  
+	<title>DynamicYou - Egzersiz Programı</title>
+
+</head>
+<div>
+
+<div class="logo"><img src="images/logo.png"></div>
+<div class="ustmenu">
+    <div class="asdas" style="text-align: center;"><a href="#">Sağlıklı ve Fit Bir Yaşam İçin İlk Adımı Atın!</a></div></div>
+<div class="altmenu">
+<div class="menu">
+	<ul>
+		<li><a href="index.html">Anasayfa</a></li>
+		<li><a href="hakkimizda.html">Hakkımızda</a></li>
+		<li><a href="beslenme.html">Beslenme Rehberi</a></li>
+		<li><a href="iletisim.html">İletişim</a></li>
+	</ul></div>
+
+</div>
+<div class="slider">
+</div>
+<h1>Karvonen Hesaplama Sonucu</h1>
+
+<div class="kapsam">
+<div id="resim"></div>
+<div id="result"></div>
+</div>
+<div class="kapsam">
+<div id="resim2"></div>
+<div id="result2"></div>
+</div>
+<div class="kapsam">
+<div id="resim3"></div>
+<div id="result3"></div>
+</div>
+<div class="kapsam">
+<div id="resim4"></div>
+<div id="result4"></div>
+</div>
+<div class="kapsam">
+<div id="resim5"></div>
+<div id="result5"></div>
+    </div>
+    
+<script>
+    // Yerel depolamadan sonucu al
+    var sonuc = localStorage.getItem("sonuc");
+
+    // Sonuca göre farklı yazı ve resim göster
+    var resultDiv = document.getElementById("result");
+    var resimDiv = document.getElementById("resim");
+    var result2Div = document.getElementById("result2");
+    var resim2Div = document.getElementById("resim2");
+    var result3Div = document.getElementById("result3");
+    var resim3Div = document.getElementById("resim3");
+    var result4Div = document.getElementById("result4");
+    var resim4Div = document.getElementById("resim4");
+    var result5Div = document.getElementById("result5");
+    var resim5Div = document.getElementById("resim5");
+  
+  
+    if (sonuc < 120) {
+        resimDiv.innerHTML += '<img src="images/hitt.png">';
+        resultDiv.innerHTML = `<div class ="program">
+           <b> HIIT Antrenmanı:</b> 15-25 dakika
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/burpees.png">';
+        result2Div.innerHTML =  `<div class ="program">
+            <b>  Burpees: </b>10-15 dakika
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/Mountainclimbers.png">';
+            result3Div.innerHTML =  `<div class ="program">
+                <b>   Mountain Climbers: </b>10-15 dakika
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/Kettlebell Swings.pngg">';
+            result4Div.innerHTML =  `<div class ="program">
+                <b>     Kettlebell Swings:</b> 15-20 dakika
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/core.png">';
+            result5Div.innerHTML =  `<div class ="program">
+                <b>    Core Çalışmaları:</b> 10-15 dakika
+            </div>`;
+
+      
+
+ 
+    } else if (sonuc >= 120 && sonuc < 140) {
+        resimDiv.innerHTML += '<img src="images/hitt.png">';
+        resultDiv.innerHTML = `<div class ="program">
+            <b>   HIIT Antrenmanı: </b>20-30 dakika
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/burpees.png">';
+        result2Div.innerHTML =  `<div class ="program">
+            <b>   Burpees: </b>15-20 dakika
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/Mountainclimbers.png">';
+            result3Div.innerHTML =  `<div class ="program">
+                <b>   Mountain Climbers:</b> 15-20 dakika
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/Kettlebell Swings.png">';
+            result4Div.innerHTML =  `<div class ="program">
+                <b>   Kettlebell Swings:</b> 20-25 dakika
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/core.png">';
+            result5Div.innerHTML =  `<div class ="program">
+                <b>    Core Çalışmaları:</b> 15-20 dakika
+            </div>`;
+
+      
+
+
+
+
+    } else if (sonuc >= 140 && sonuc <160){
+        resimDiv.innerHTML += '<img src="images/hitt.png">';
+        resultDiv.innerHTML = `<div class ="program">
+            <b>   HIIT Antrenmanı: </b>25-35 dakika
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/burpees.png">';
+        result2Div.innerHTML =  `<div class ="program">
+            <b>  Burpees:</b> 20-25 dakika
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/Mountainclimbers.png">';
+            result3Div.innerHTML =  `<div class ="program">
+                <b> Mountain Climbers:</b> 20-25 dakika
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/Kettlebell Swings.png">';
+            result4Div.innerHTML =  `<div class ="program">
+                <b>Kettlebell Swings:</b> 25-30 dakika
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/core.png">';
+            result5Div.innerHTML =  `<div class ="program">
+                <b> Core Çalışmaları:</b> 20-25 dakika
+            </div>`;
+
+      
+
+    
+ } else {
+    resimDiv.innerHTML += '<img src="images/hitt.png">';
+        resultDiv.innerHTML = `<div class ="program">
+            <b>   HIIT Antrenmanı:</b> 30-40 dakika
+            
+            <li><b>Isınma (10 dakika):</b>
+                <ul>
+                    <li>Hafif tempolu koşu, yürüyüş veya dinamik esneme hareketleri.</li>
+                </ul>
+            </li>
+            <li><b>Ana Antrenman (20 dakika):</b>
+               
+                    <li><b>Yüksek Yoğunluklu Dönem (30 saniye):</b>
+                        <ul>
+                            <li>Jumping jack</li>
+                            <li>Yüksek diz çekme</li>
+                        </ul>
+                    </li>
+                    <li><b>Düşük Yoğunluklu Dönem (30 saniye):</b>
+                        <ul>
+                            <li>Hafif yürüyüş veya hafif tempolu koşu</li>
+                        </ul>
+                    </li>
+                
+                <p>Bu döngüyü 20 kez tekrarlayın.</p>
+            </li>
+            <li><b>Soğuma ve Esneme (10 dakika):</b>
+                <ul>
+                    <li>Düşük tempolu yürüyüş veya hafif koşu ile soğuyun.</li>
+
+                </ul>
+            </li>
+        </ul>
+            </div>`;
+        resim2Div.innerHTML += '<img src="images/burpees.png">';
+        result2Div.innerHTML =  `<div class ="program">
+            <b>   Burpees:</b> 25-30 dakika
+            
+            <p><b>1. Isınma (5 dakika):</b></p>
+        <p>Hafif tempolu koşu, yürüyüş veya dinamik esneme hareketleri.</p>
+        
+        <p><b>2. Ana Antrenman (20 dakika):</b></p>
+        <p><b>Burpee (40 saniye):</b></p>
+        <ul>
+            <li>Ayakta durarak başlayın.</li>
+            <li>Squat pozisyonuna inin ve ellerinizi yere koyun.</li>
+            <li>Ayaklarınızı geriye doğru zıplatın ve plank pozisyonuna geçin.</li>
+            <li>Bir şınav çekin.</li>
+            <li>Ayaklarınızı tekrar squat pozisyonuna zıplatın.</li>
+            <li>Ayağa kalkarak yukarı zıplayın ve kollarınızı başınızın üzerine kaldırın.</li>
+        </ul>
+            </div>`;
+            resim3Div.innerHTML += '<img src="images/Mountainclimbers.png">';
+            result3Div.innerHTML =  `<div class ="program">
+                <b>      Mountain Climbers:</b> 25-30 dakika
+                <p><b>1. Isınma (5 dakika):</b> Hafif tempolu koşu, yerinde koşu, jumping jack veya dinamik esneme hareketleri.</p>
+        
+        <p><b>2. Ana Antrenman (20-25 dakika):</b></p>
+        <p><b>Mountain Climbers (40 saniye):</b>
+            <ul>
+                <li>Push-up pozisyonunda elleriniz ve ayaklarınızla başlayın, vücudunuz düz bir çizgi oluşturmalıdır.</li>
+                <li>Sırasıyla sağ ve sol bacağınızı göğsünüze doğru çekin, dizinizi göğsünüzle neredeyse temas ettirin.</li>
+                <li>Bacaklarınızı hızlıca değiştirerek, koşu hareketi gibi yapın.</li>
+                <li>Sırtınızı düz tutun, hareketi karın kaslarınızla yapın.</li>
+            </ul>
+        </p>
+
+        <p>Bu döngüyü 20-25 dakika boyunca tekrarlayın.</p>
+        
+        <p><b>3. Soğuma ve Esneme (5 dakika):</b> Düşük tempolu yürüyüş veya hafif koşu ile soğuyun. Statik esneme hareketleriyle bitirin.</p>
+            </div>`;
+
+            resim4Div.innerHTML += '<img src="images/Kettlebell Swings.png">';
+            result4Div.innerHTML =  `<div class ="program">
+                <b>     Kettlebell Swings:</b> 30-35 dakika
+                <p><b>1. Isınma (5 dakika):</b> Hafif tempolu koşu, dinamik esneme hareketleri veya yerinde koşu.</p>
+    
+    <p><b>2. Ana Antrenman (20-25 dakika):</b></p>
+    <p><b>Kettlebell Swings (40 saniye):</b></p>
+    <ul>
+        <li>Ayaklarınız omuz genişliğinde açık, kettlebell (demir topuz) önünüzde.</li>
+        <li>Kalçanızı geriye doğru iterek çömelin, kettlebell'i iki elinizle tutun.</li>
+        <li>Kalçanızı hızla ileri doğru iterek kettlebell'i göğüs hizasına kadar sallayın.</li>
+        <li>Kollarınızı kırmadan ve omuzlarınızı kullanmadan kettlebell'i kontrol altında tutun.</li>
+        <li>Hareketi kalça ve karın kaslarınızla yapın, sırtınızı düz tutun.</li>
+    </ul>
+    <p><b>Dinlenme (20 saniye):</b> Hafif yürüyüş veya dinlenme.</p>
+    <p>Bu döngüyü 20-25 dakika boyunca tekrarlayın.</p>
+    
+    <p><b>3. Soğuma ve Esneme (5 dakika):</b> Düşük tempolu yürüyüş veya hafif koşu ile soğuyun. Statik esneme hareketleriyle bitirin.</p>
+            </div>`;
+            resim5Div.innerHTML += '<img src="images/core.png">';
+            result5Div.innerHTML =  `<div class ="program">
+                <b>     Core Çalışmaları: </b>25-30 dakika
+                <p><b>1. Isınma (5 dakika):</b> Hafif tempolu koşu veya yerinde koşu. Dinamik karın ve bel esnetme hareketleri.</p>
+    
+    <p><b>2. Ana Antrenman (20-25 dakika):</b></p>
+    <ul>
+        <li><b>Plank (40 saniye):</b> Dirseklerinizin ve ayak parmaklarınızın üzerinde dik pozisyonda durun, vücudunuz düz bir çizgi oluşturmalıdır. Karın kaslarınızı sıkın, sırtınızı düz tutun ve nefes almayı unutmayın.</li>
+        <li><b>Russian Twist (40 saniye):</b> Oturarak yerde bacaklarınızı hafifçe kıvırın, topu ellerinizle tutun ve gövdenizi hafifçe arkaya yatırın. Karın kaslarınızı sıkarak, topu sağdan sola doğru hareket ettirin.</li>
+        <li><b>Leg Raises (40 saniye):</b> Sırtüstü yatın, ellerinizi kalçalarınızın altına koyun. Bacaklarınızı yavaşça kaldırın, ardından kontrollü bir şekilde indirin.</li>
+        <li><b>Bicycle Crunches (40 saniye):</b> Sırtüstü yatın, ellerinizi başınızın arkasında birleştirin. Karşı dirseğinizi karşı dizinize doğru çekin, aynı zamanda diğer bacağınızı da uzatın ve gövdenizi döndürün.</li>
+        
+    </ul>
+
+
+</div>
+            </div>`;
+
+      
+
+    }
+
+
+</script>
+
+</body>
+</html>

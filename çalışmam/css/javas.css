@@ -1,0 +1,112 @@
+h1{
+    color: aliceblue;
+}
+#result{
+    
+    width: 420px;
+    height: auto;
+   
+}
+@media screen and (max-device-width:800px) {
+    #result{width:100%;
+    margin-top: 150px;}
+    #resim{height: 450px;
+    width: 100%;
+    }
+    #result2{width: 100%;
+    margin-top: 150px;}
+    #resim2{height: 450px;
+    width: 100%;
+    }
+    }
+
+#resim{
+    
+    width: 400px;
+    height: 250px;
+   
+   
+}
+#result2{
+   
+    width: 420px;
+    height: auto;
+  
+  
+}
+#resim2{
+    
+    width: 400px;
+    height: 250px;
+   
+   
+}
+#result3{
+    
+    width: 420px;
+    height: auto;
+    
+  
+}
+#resim3{
+    
+    width: 400px;
+    height: 250px;
+   
+   
+}
+#result4{
+    
+    width: 420px;
+    height: auto;
+    
+  
+}
+#resim4{
+    
+    width: 400px;
+    height: 250px;
+   
+   
+}#result5{
+    
+    width: 420px;
+    height: auto;
+    
+  
+}
+#resim5{
+    
+    width: 400px;
+    height: 250px;
+   
+   
+}
+.kapsam{
+float: left;
+width: 500px;
+height: auto;
+
+}
+
+.program {
+    margin: 20px;
+    color: white;
+    
+}
+.program h3, .program h4 {
+    margin-top: 20px;
+}
+.program ul {
+    list-style-type:square;
+    padding-left: 0;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 28px;
+
+}
+.program ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+

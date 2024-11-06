@@ -1,0 +1,16 @@
+
+.logo img{
+	height: 120px;
+	width: 120px;
+
+}
+.logo{
+	background-color: black;
+	width: 130px;
+	height: 120px;
+	float: left;
+	border-right-style:solid;
+	      border-width: 1px;
+      border-color: gray;
+
+}
